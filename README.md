@@ -6,20 +6,16 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 
 ## Components
 
-```text
-[Kali Linux VM (Attacker)] ---> (Generates Nmap/Malicious Traffic) 
-                                       |
-                                       v
-[Raspberry Pi (Sensor)]   ---> (Suricata Sniffs Traffic -> Writes to eve.json)
-                                       |
-                                       v
-[Wazuh Agent (Shipper)]   ---> (Encrypts & Ships Logs via Port 1514/TCP)
-                                       |
-                                       v
-[Ubuntu Server (SIEM)]    ---> (Decodes, Indexes, & Visualizes in Dashboard via Web Portal)
 
----
-```
+* [Kali Linux VM (Attacker)] ---> Perform MITRE ATTACK techniques (e.g SSH brute force, root escalation.
+
+* [Ubuntu VM (Endpoint)]   ---> Victim device
+                                 
+* [Wazuh Agent (Data collector)]   ---> Installed on the endpoint, it ships logs via Port 1514/TCP.
+                             
+* [Wazuh Server on Docker]    ---> Indexes and visualizes the data in Dashboard via web portal.
+
+
 
 ## 🚀 Deployment Instructions
 

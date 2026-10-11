@@ -37,7 +37,10 @@ Instructions: https://documentation.wazuh.com/current/deployment-options/docker/
 
 ```hydra -l ubuntu-prod -P /usr/share/wordlists/rockyou.txt ssh://VICTIM_IP -t 4```
 
-<img width="1097" height="203" alt="image" src="https://github.com/user-attachments/assets/f8f0bc3a-34c5-47e0-aefa-5d103d54fb46" />
+Results:
+
+The first 3 attempts were logged, demonstrating the failed authentication. The last attempt by Hydra on the attacker's machine was successful in retrieving the weak password
+<img width="1436" height="850" alt="image" src="https://github.com/user-attachments/assets/82606fa7-9777-4bde-8f9c-96fe074cfa90" />
 
 
 

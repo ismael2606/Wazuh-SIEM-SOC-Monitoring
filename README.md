@@ -32,7 +32,7 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 
 ### Detection results
 
-#### SSH Brute Force |  ATT&CK T1110.001 - Brute Force: Password Guessing
+#### * SSH Brute Force |  ATT&CK T1110.001 - Brute Force: Password Guessing
 
 * **Victim:** account created with a weak password
 
@@ -45,6 +45,6 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 #### Results:
 
 The first 3 attempts were logged, demonstrating the failed authentication. The last attempt by Hydra on the attacker's machine was successful in retrieving the weak password
-![ssh brute foce attack with hydra](screenshots/ssh-brute-force.png)
+![ssh brute force attack with hydra](screenshots/ssh-brute-force.png)
 
 

@@ -16,20 +16,18 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 * Wazuh Server on Docker: Indexes and visualizes the data in the Dashboard via the web portal.
 
 
-
 ##  Steps
 
-#### Docker Setup 
+### Docker Setup 
 To install: https://docs.docker.com/engine/install/ubuntu/
 
-#### Wazuh installation via Docker
+### Wazuh installation via Docker
 Instructions: https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html
+  * NOTE: Installation can be done as a single or multiple node stack, depending on your preference.
 
-NOTE: installation can be done as a single or multiple node stack depending your preference.
+### Detection results
 
-### 🛠️ Step 1: Optimize the Raspberry Pi for Packet Capture
-
-1. Log into your Raspberry Pi OS Lite (64-bit) instance via SSH. Before installing the NIDS engine, the hardware interface must be configured to pass all segment frames up the stack without drop anomalies.
+#### SSH Brute Force
 
 2. Persistent Promiscuous Mode Configuration
 Force the internal network interface card (NIC) out of standard filtering mode to allow full frame inspection. Create a persistent systemd lifecycle management service unit:

@@ -16,12 +16,12 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 * Wazuh Server on Docker: Indexes and visualizes the data in the Dashboard via the web portal.
 
 
-##  Steps
+##  Prerequisites
 
-### Docker Setup 
+### 1 - Docker Setup 
 To install: https://docs.docker.com/engine/install/ubuntu/
 
-### Wazuh installation via Docker
+### 2 - Wazuh installation via Docker
 Instructions: https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html
   * NOTE: Installation can be done as a single or multiple node stack, depending on your preference.
 

@@ -7,13 +7,13 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 ## Components
 
 
-* Kali Linux VM (Attacker) ---> Perform MITRE ATTACK techniques (e.g., SSH brute force, root escalation.
+* Kali Linux VM (Attacker): Perform MITRE ATTACK techniques (e.g., SSH brute force, root escalation.
 
-* Ubuntu VM (Endpoint) ---> Victim device
+* Ubuntu VM (Endpoint): Victim device
                                  
-* Wazuh Agent (Data collector) ---> Installed on the endpoint, it ships logs via Port 1514/TCP.
+* Wazuh Agent: ---> Installed on the endpoint, it ships logs via Port 1514/TCP.
                              
-* Wazuh Server on Docker ---> Indexes and visualizes the data in the Dashboard via the web portal.
+* Wazuh Server on Docker: Indexes and visualizes the data in the Dashboard via the web portal.
 
 
 

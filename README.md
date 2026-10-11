@@ -1,13 +1,13 @@
 
 # Summary
-A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoint, and then ran MITRE ATT&CK techniques against it to test what the default ruleset actually detects and what it doesn't. Covers the log pipeline ingestion from the Linux endpoint(s) to the Wazuh Manager.
+A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoint, and then ran MITRE ATT&CK techniques against it to test what the default ruleset actually detects and what it doesn't. Covers the log pipeline ingestion from the agent endpoints to the Wazuh Manager.
 
 ---
 
 ## Components
 
 
-* Kali Linux VM (Attacker): Perform MITRE ATT&CK techniques (e.g., SSH brute force, root escalation).
+* Kali Linux VM (Attacker): Perform MITRE ATT&CK techniques (e.g., SSH brute force, privilege escalation).
 
 * Ubuntu VM (Endpoint): Victim device
                                  

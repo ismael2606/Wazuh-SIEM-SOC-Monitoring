@@ -47,4 +47,6 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 The first 3 attempts were logged, demonstrating the failed authentication. The last attempt by Hydra on the attacker's machine was successful in retrieving the weak password
 ![ssh brute force attack with hydra](screenshots/ssh-brute-force.png)
 
+Here, we can see that the default rule ID 5670 flagged this brute force attempt.
+![](screenshots/ssh-bf-ruleid.png)
 

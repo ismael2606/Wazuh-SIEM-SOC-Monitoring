@@ -11,7 +11,7 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 
 * Ubuntu VM (Endpoint): Victim device
                                  
-* Wazuh Agent: ---> Installed on the endpoint, it ships logs via Port 1514/TCP.
+* Wazuh Agent: Installed on the endpoint, it ships logs via Port 1514/TCP.
                              
 * Wazuh Server on Docker: Indexes and visualizes the data in the Dashboard via the web portal.
 

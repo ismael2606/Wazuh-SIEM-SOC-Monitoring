@@ -7,7 +7,7 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 ## Components
 
 
-* Kali Linux VM (Attacker): Perform MITRE ATTACK techniques (e.g., SSH brute force, root escalation.
+* Kali Linux VM (Attacker): Perform MITRE ATT&CK techniques (e.g., SSH brute force, root escalation).
 
 * Ubuntu VM (Endpoint): Victim device
                                  
@@ -36,7 +36,7 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 
 * **Victim:** account created with a weak password
 
-```sudo useradd -m ubuntu-prod && echo 'ubuntu-prod:password' | sudo chpasswd```
+```sudo useradd -m ubuntu-prod && echo 'ubuntu-prod:<weak-password>' | sudo chpasswd```
 
 * **Attacker:** Used Hydra to perform brute force to log in.
 

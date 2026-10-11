@@ -36,7 +36,7 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 
 * **Victim:** account created with a weak password
 
-```sudo useradd -m ubuntu-prod && echo 'victim:password' | sudo chpasswd```
+```sudo useradd -m ubuntu-prod && echo 'ubuntu-prod:password' | sudo chpasswd```
 
 * **Attacker:** Used Hydra to perform brute force to log in.
 

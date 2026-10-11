@@ -45,6 +45,6 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 #### Results:
 
 The first 3 attempts were logged, demonstrating the failed authentication. The last attempt by Hydra on the attacker's machine was successful in retrieving the weak password
-<img width="1436" height="850" alt="image" src="https://github.com/user-attachments/assets/6444c63e-16e8-4620-9f6c-8dda86963d59" />
+screenshots/ssh-brute-force.png
 
 

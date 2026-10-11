@@ -1,10 +1,10 @@
 
 # Summary
-A self-hosted SIEM lab built with Wazuh to monitor suspicious network events on the local network. Highlighting the different MITRE ATTACK techniques as part of our detection coverage, and the custom alert rules to cover security events that are not triggered by Wazuh's default rules.
+A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoint, and then ran MITRE ATT&CK techniques against it to test what the default ruleset actually detects and what it doesn't. Covers the log pipeline ingestion from the Linux endpoint(s) to the Wazuh Manager.
 
 ---
 
-## 🗺️ Architectural Design & Data Flow
+## Components
 
 ```text
 [Kali Linux VM (Attacker)] ---> (Generates Nmap/Malicious Traffic) 

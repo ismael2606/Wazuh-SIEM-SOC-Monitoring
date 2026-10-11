@@ -1,10 +1,6 @@
 
 # Summary
-A self-hosted SIEM lab built with Wazuh to monitor suspicious network events on the local network. Highlighting the different MITTRE ATTACK techniques as part of our detection coverage, and the custom alert rules to cover security events that are not triggered by the Wazuh's default rules.
-
-## 📌 Project Overview
-
-Designed and deployed a dual-purpose **Endpoint & Network Intrusion Detection System (NIDS)** engineering lab utilizing a hardware-based Raspberry Pi network sensor and a virtualized **Wazuh SIEM stack**. The Raspberry Pi captures raw passive wire traffic utilizing an optimized **Suricata** engine, while a localized **Wazuh Agent** securely streams host and network telemetry out to a central **Wazuh Manager, Indexer, and Dashboard** instance. End-to-end telemetry ingestion and rule mapping were successfully validated by executing adversarial reconnaissance and exploits via **Kali Linux** to map telemetry to the **MITRE ATT&CK Framework**.
+A self-hosted SIEM lab built with Wazuh to monitor suspicious network events on the local network. Highlighting the different MITRE ATTACK techniques as part of our detection coverage, and the custom alert rules to cover security events that are not triggered by Wazuh's default rules.
 
 ---
 

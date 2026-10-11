@@ -1,5 +1,6 @@
 
-# 🏗️ Hybrid SOC & Network Detection Lab (Wazuh SIEM & Suricata NIDS)
+# Summary
+A self-hosted SIEM lab built with Wazuh to monitor suspicious network events on the local network. Highlighting the different MITTRE ATTACK techniques as part of our detection coverage, and the custom alert rules to cover security events that are not triggered by the Wazuh's default rules.
 
 ## 📌 Project Overview
 

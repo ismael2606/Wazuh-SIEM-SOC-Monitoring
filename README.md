@@ -17,18 +17,15 @@ A self-hosted SIEM lab where I deployed Wazuh in Docker, spun up a victim endpoi
 
 
 
-## 🚀 Deployment Instructions
+##  Steps
 
-#### Automated Setup (Recommended)
-To automatically optimize your interface, configure Suricata NIDS, install the Wazuh Agent, and build the ingestion pipeline on your Raspberry Pi sensor with a single command, execute the deployment script provided in this repository:
+#### Docker Setup 
+To install: https://docs.docker.com/engine/install/ubuntu/
 
-```bash
-wget https://raw.githubusercontent.com/ismael2606/Wazuh-Suricata-SOC-Lab/main/scripts/setup_sensor.sh
-chmod +x setup_sensor.sh
-sudo ./setup_sensor.sh
-```
+#### Wazuh installation via Docker
+Instructions: https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html
 
-Otherwise, you can follow manual setup steps below.
+NOTE: installation can be done as a single or multiple node stack depending your preference.
 
 ### 🛠️ Step 1: Optimize the Raspberry Pi for Packet Capture
 

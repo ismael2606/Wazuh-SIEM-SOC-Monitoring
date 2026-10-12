@@ -57,5 +57,19 @@ Once logged in, the default rule 5715 was triggered once we were able to sign in
 
 #### * Create local user | ATT&CK T1136.001
 
-To have persistent access to this server, we've created a local account that was flagged under default rule 5902.
+To have persistent access to this server, we've created a local account:
+```
+sudo useradd -m -s /bin/bash backdoor
+echo 'backdoor:Hacked123' | sudo chpasswd
+sudo usermod -aG sudo backdoor1         
+```
+This was detected under default rule 5902.
 ![](screenshots/created-user-persist.png)
+
+#### * Sudo privilege escalation | ATT&CK T1548.003
+
+To increase our privileges within our victim's system, we invoked `sudo` with `sudo -i`.
+![](screenshots/sudo-escalate.png)
+
+
+

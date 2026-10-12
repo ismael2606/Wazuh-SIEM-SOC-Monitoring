@@ -61,8 +61,8 @@ Once logged in, the default rule 5715 was triggered once we were able to sign in
 
 To have persistent access to this server, we've created a local account:
 ```
-sudo useradd -m -s /bin/bash backdoor
-echo 'backdoor:Hacked123' | sudo chpasswd
+sudo useradd -m -s /bin/bash backdoor1
+echo 'backdoor:<weak-password>' | sudo chpasswd
 sudo usermod -aG sudo backdoor1         
 ```
 This was detected under default rule 5902.

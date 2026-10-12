@@ -54,3 +54,8 @@ Here, we can see that the default rule ID 5760 flagged this brute force attempt.
 
 Once logged in, the default rule 5715 was triggered once we were able to sign in from the attacker VM
 ![](screenshots/ssh-bf-login.png)
+
+#### * Create local user | ATT&CK T1136.001
+
+To have persistent access to this server, we've created a local account that was flagged under default rule 5902.
+![](screenshots/created-user-persist.png)

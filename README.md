@@ -50,3 +50,7 @@ The first 3 attempts were logged, demonstrating the failed authentication. The l
 Here, we can see that the default rule ID 5760 flagged this brute force attempt.
 ![](screenshots/ssh-bf-ruleid.png)
 
+#### * Valid login after brute force |  ATT&CK T1078
+
+Once logged in, the default rule 5715 was triggered once we were able to sign in from the attacker VM
+![](screenshots/ssh-bf-login.png)

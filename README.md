@@ -48,7 +48,7 @@ The first 3 attempts were logged, demonstrating the failed authentication. The l
 
 ![ssh brute force attack with hydra](screenshots/ssh-brute-force.png)
 
-Each failed login was logged under rule 5760 (sshd: authentication failed). The brute-force correlation rule did not fire on this run — only 3 failures were recorded before Hydra found the password, below the default threshold of 8 failures in 120 seconds.
+Each failed login was logged under rule 5760 (sshd: authentication failed). The brute-force correlation rule did not fire on this run; only 3 failures were recorded before Hydra found the password, below the default threshold of 8 failures in 120 seconds.
 
 ![](screenshots/ssh-bf-ruleid.png)
 

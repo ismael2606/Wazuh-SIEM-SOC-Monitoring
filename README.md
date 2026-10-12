@@ -72,5 +72,12 @@ To increase our privileges within our victim's system, we invoked `sudo` with `s
 
 ![](screenshots/sudo-escalate.png)
 
+#### * Cron persistence | ATT&CK T1053.003
+
+To further test our default detection capabilities, we ran a cron task to open a reverse-shell back to our attacker's VM. This was also covered by the default rule ID 2833.
+
+![](screenshots/cron-persistence.png)
+
+
 
 

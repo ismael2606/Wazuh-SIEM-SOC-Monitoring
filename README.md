@@ -70,7 +70,7 @@ This was detected under default rule 5902.
 
 #### * Sudo privilege escalation | ATT&CK T1548.003
 
-To increase our privileges within our victim's system, we invoked `sudo` with `sudo -i`, this was also detected under rule ID 5402.
+To increase our privileges within our victim's system, we invoked `sudo` with `sudo -i ', which was also detected under rule ID 5402.
 
 ![](screenshots/sudo-escalate.png)
 

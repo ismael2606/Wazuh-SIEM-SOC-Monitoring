@@ -109,7 +109,7 @@ Gap: the default ruleset is blind to it
 
 With the reverse shell active and commands running as root, the Wazuh dashboard showed no actionable alert. Linux does not log outbound connection creation by default, so no event describing the reverse shell ever reached the SIEM for matching.
 
-![](screenshots/no-rshell-log)
+![](screenshots/no-rshell-log.png)
 
 
 Root cause: this is a telemetry gap, not a missing-rule problem. Wazuh can only alert on what the OS logs, and  Linux doesn't generate an event for this. Detection, therefore, required adding telemetry that the default install lacks.
@@ -131,8 +131,8 @@ With execve logging active, re-running the attack produced an audit record conta
 **NOTE:** a2 is hex-encoded (auditd encodes arguments containing spaces/special chars). Decoded, it is the /dev/tcp reverse-shell command.
 
 **The custom rule** 
-xml
 ```
+xml
 <group name="local,audit,">
   <rule id="100100" level="12">
     <if_sid>80700</if_sid>
@@ -153,7 +153,7 @@ Scope: This rule matches the bash /dev/tcp technique specifically. A reverse she
 
 Tested the rule against the real audit line with wazuh-logtest — it matched rule 100100, level 12 (vs. level-0 80700 before). Then confirmed it fires live, end to end, with the attack flowing through the agent to the dashboard:
 
-![](screenshots/rshell-success)
+![](screenshots/rshell-success.png)
 
 The rule fired reliably on every reverse-shell execution once the audit pipeline was in place.
 

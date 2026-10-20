@@ -144,8 +144,6 @@ xml
   </rule>
 </group>
 ```
-Chains off rule 80700 (the auditd "messages grouped" rule that these events match by default at level 0).
-Matches the hex signature of /dev/tcp/ against the full log — because (see lessons below) the decoder does not expose the argument holding the string as its own field.
 
 Scope: This rule matches the bash /dev/tcp technique specifically. A reverse shell via nc, Python, or socat would not include this signature and would not trigger it. Real detections are technique-specific; this one covers the bash variant.
 

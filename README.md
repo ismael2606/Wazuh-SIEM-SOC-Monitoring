@@ -101,13 +101,12 @@ A bash reverse shell opens an interactive shell and redirects its I/O over a TCP
 
 This returned a root shell on the attacker's machine.
 
-Show Image
 
 ![](screenshots/nc-4444-kali.png)
 
 Gap: the default ruleset is blind to it
 
-With the reverse shell active and commands running as root, the Wazuh dashboard showed no actionable alert. Linux does not log outbound connection creation by default, so no event describing the reverse shell ever reached the SIEM for matching.
+With the reverse shell active and commands running as root, the Wazuh dashboard showed no actionable alerts. Linux does not log outbound connection creation by default, so no event describing the reverse shell ever reached the SIEM for matching.
 
 ![](screenshots/no-rshell-log.png)
 
@@ -157,9 +156,7 @@ The rule fired reliably on every reverse-shell execution once the audit pipeline
 
 #### Lessons learned: Pipeline issues
 
-Getting from "rule written" to "alert firing live" surfaced three things default tutorials skip:
-
-* Custom rule changes need a full container recreate, not just a restart. The wazuh-config-mount copies local_rules.xml into the manager only on fresh container start — `docker compose down && docker compose up -d`. A plain restart left the old rule loaded while the host file showed the new one, which silently defeated every test until caught.
+* Custom rule changes need a full container recreate, the wazuh-config-mount copies local_rules.xml into the manager only after a fresh container restart — `docker compose down && docker compose up -d`. 
 
 * The auditd decoder doesn't expose every execve arg as a field. audit.execve.a0 and a1 decoded, but a2 (which held /dev/tcp) did not — so a rule matching audit.execve.a2 would never fire. Matched the hex signature in the full log instead.
   

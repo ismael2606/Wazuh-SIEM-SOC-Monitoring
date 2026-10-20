@@ -149,11 +149,11 @@ Matches the hex signature of /dev/tcp/ against the full log — because (see les
 
 Scope: This rule matches the bash /dev/tcp technique specifically. A reverse shell via nc, Python, or socat would not include this signature and would not trigger it. Real detections are technique-specific; this one covers the bash variant.
 
-Validation
+**Validation**
 
 Tested the rule against the real audit line with wazuh-logtest — it matched rule 100100, level 12 (vs. level-0 80700 before). Then confirmed it fires live, end to end, with the attack flowing through the agent to the dashboard:
 
-![](rshell-success)
+![](screenshots/rshell-success)
 
 The rule fired reliably on every reverse-shell execution once the audit pipeline was in place.
 
